@@ -1,1 +1,24 @@
-<p>login works!</p>
+<div class="login-container">
+    <img class="film" src="assets/images/film.png" alt="" />
+    <div class="logo">My Cinema Logo</div>
+    <div class="desc">
+        Welcome to My Online Cinema! Explore a wide range of movies, from classics
+        to the latest releases. Join us for an immersive cinematic experience from
+        the comfort of your home. Don't miss out on our featured movies and
+        exclusive content. Sign in to start watching now!
+    </div>
+    <div class="login-form">
+        <div class="form-group">
+            <label for="uname">Username</label>
+            <input type="text" name="uname" class="form-control" [(ngModel)]="username" />
+        </div>
+        <div class="form-group">
+            <label for="pword">Password</label>
+            <input type="password" name="pword" class="form-control" [(ngModel)]="password" />
+        </div>
+        <div class="btn-container">
+            <div class="error">{{ errorMessage }}</div>
+            <button class="btn btn-dark" (click)="login()">Login</button>
+        </div>
+    </div>
+</div>
