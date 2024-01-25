@@ -1,10 +1,15 @@
 import { Injectable } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Injectable({
   providedIn: 'root',
 })
 export class AuthService {
-  constructor() {}
+  constructor(private router: Router) {}
+
+  logout() {
+    this.router.navigate(['login']);
+  }
 
   login(username: string, password: string) {
     if (username === 'Artur Rubets' && password === 'qwerty') {
